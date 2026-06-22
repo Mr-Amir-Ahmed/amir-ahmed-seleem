@@ -1,0 +1,679 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Amir Ahmed — IT Specialist & Web Developer</title>
+  <meta name="description" content="Portfolio of Amir Ahmed Abd El Hakem Seleem — IT Helpdesk Specialist, Network Administrator, Web Developer & AI Specialist based in Cairo, Egypt.">
+
+  <!-- ====== FONTS ====== -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Sora:wght@300;400;500;600;700;800&family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+
+  <!-- ====== ICONS ====== -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+  <!-- ====== EXTERNAL STYLESHEET ====== -->
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- 3D WebGL canvas (driven by js/three-scene.js) -->
+  <canvas id="bg-canvas"></canvas>
+  <div class="grid-overlay"></div>
+
+  <!-- ============= NAVIGATION ============= -->
+  <nav id="navbar">
+    <div class="container nav-inner">
+      <a href="#home" class="nav-logo">
+        <span class="bracket">&lt;</span>
+        <span class="name">Amir</span>
+        <span class="bracket">/&gt;</span>
+        <span class="dot"></span>
+      </a>
+      <ul class="nav-links">
+        <li><a href="#home" class="active">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#experience">Experience</a></li>
+        <li><a href="#certifications">Certificates</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+      <a href="#contact" class="nav-cta">
+        <i class="fas fa-paper-plane"></i> Hire Me
+      </a>
+      <button class="nav-toggle" id="navToggle" aria-label="Toggle menu">
+        <i class="fas fa-bars"></i>
+      </button>
+    </div>
+  </nav>
+
+  <!-- ============= MOBILE MENU ============= -->
+  <div class="mobile-menu" id="mobileMenu">
+    <ul>
+      <li><a href="#home" class="mobile-link">Home</a></li>
+      <li><a href="#about" class="mobile-link">About</a></li>
+      <li><a href="#skills" class="mobile-link">Skills</a></li>
+      <li><a href="#experience" class="mobile-link">Experience</a></li>
+      <li><a href="#certifications" class="mobile-link">Certificates</a></li>
+      <li><a href="#contact" class="mobile-link">Contact</a></li>
+    </ul>
+  </div>
+
+  <!-- ============= HERO ============= -->
+  <section id="home">
+    <div class="hero-bg-shapes">
+      <div class="blob blob-1"></div>
+      <div class="blob blob-2"></div>
+    </div>
+    <div class="container hero-inner">
+      <div class="hero-text">
+        <div class="hero-greeting">
+          <span class="dot-pulse"></span>
+          <span>Hello World, I'm</span>
+        </div>
+        <h1 class="hero-name">
+          <span class="first">Amir</span>
+          <span class="last gradient-text"> Seleem</span>
+        </h1>
+        <div class="hero-role">
+          <span class="prompt">&gt;</span>
+          <span id="typedRole"></span>
+          <span class="cursor"></span>
+        </div>
+        <p class="hero-desc">
+          Detail-oriented IT Helpdesk Specialist & Web Developer with a Bachelor's in Management Information Systems. I deliver fast, efficient, user-focused solutions across networking, infrastructure, and full-stack development.
+        </p>
+        <div class="hero-cta">
+          <a href="#about" class="btn btn-primary">
+            <i class="fas fa-user"></i> About Me
+          </a>
+          <a href="Amir-Ahmed-CV.pdf" download class="btn btn-gold">
+            <i class="fas fa-download"></i> Download CV
+          </a>
+          <a href="#contact" class="btn btn-ghost">
+            <i class="fas fa-envelope"></i> Contact
+          </a>
+        </div>
+        <div class="hero-socials">
+          <a href="https://www.facebook.com/profile.php?id=100014535060032" target="_blank" class="social-icon" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+          <a href="https://wa.me/01092898024" target="_blank" class="social-icon" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+          <a href="https://www.instagram.com/amir._.ahmed_/" target="_blank" class="social-icon" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+          <a href="https://twitter.com/amahmed1508" target="_blank" class="social-icon" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+          <a href="https://www.linkedin.com/in/amir-ahmed-ba3220278/" target="_blank" class="social-icon" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+          <a href="https://github.com/Mr-Amir-Ahmed" target="_blank" class="social-icon" aria-label="GitHub"><i class="fab fa-github"></i></a>
+          <a href="https://www.behance.net/amirahmed56" target="_blank" class="social-icon" aria-label="Behance"><i class="fab fa-behance"></i></a>
+        </div>
+      </div>
+
+      <div class="hero-3d-wrap">
+        <div class="hero-3d-card" id="hero3DCard">
+          <div class="floating-tag tag-1"><i class="fas fa-network-wired"></i> Networking</div>
+          <div class="floating-tag tag-2"><i class="fas fa-code"></i> Developer</div>
+          <div class="floating-tag tag-3"><i class="fas fa-shield-halved"></i> Security</div>
+          <div class="hero-3d-inner">
+            <div class="card-top">
+              <span class="card-id">// PROFILE.ID_2025</span>
+              <span class="card-status">ONLINE</span>
+            </div>
+            <div class="card-avatar">
+              <i class="fas fa-user-astronaut"></i>
+            </div>
+            <h3 class="card-name">Amir Ahmed seleem</h3>
+            <p class="card-role">IT Specialist & Developer</p>
+            <div class="card-stats">
+              <div class="card-stat">
+                <span class="stat-num">5+</span>
+                <span class="stat-label">Years</span>
+              </div>
+              <div class="card-stat">
+                <span class="stat-num">10+</span>
+                <span class="stat-label">Projects</span>
+              </div>
+              <div class="card-stat">
+                <span class="stat-num">8+</span>
+                <span class="stat-label">Certs</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="scroll-indicator">
+      <div class="mouse"></div>
+      <span>SCROLL</span>
+    </div>
+  </section>
+
+  <!-- ============= ABOUT ============= -->
+  <section id="about">
+    <div class="container">
+      <div class="section-head reveal">
+        <span class="section-tag">01 / About</span>
+        <h2 class="section-title">About <span class="gold-text">Me</span></h2>
+        <p class="section-subtitle">A quick snapshot of who I am, what I do, and the value I bring to every project I touch.</p>
+      </div>
+
+      <div class="about-grid">
+        <div class="about-image-wrap reveal">
+          <div class="about-image-card" id="aboutCard">
+            <span class="corner tl"></span>
+            <span class="corner tr"></span>
+            <span class="corner bl"></span>
+            <span class="corner br"></span>
+            <div class="avatar-large">
+              <i class="fas fa-laptop-code"></i>
+            </div>
+            <div class="image-meta">
+              <span class="name">Amir Seleem</span>
+              <span class="role">IT_HELPDESK.exe</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="about-content reveal reveal-delay-1">
+          <h3>IT Helpdesk Specialist &amp; Web Developer</h3>
+          <p class="lead">
+            Detail-oriented and proactive IT Helpdesk Specialist with a Bachelor's degree in Management Information Systems and solid hands-on experience in hardware, software, and user support. I bring strong problem-solving abilities, excellent communication skills, and a deep understanding of IT infrastructure to deliver fast, efficient, and user-focused solutions. Seeking a Junior-level IT Helpdesk position where I can contribute to system stability, end-user satisfaction, and team success in a fast-paced environment.
+          </p>
+
+          <div class="about-info-grid">
+            <div class="info-card">
+              <div class="info-icon"><i class="fas fa-calendar"></i></div>
+              <div>
+                <span class="label">Date of Birth</span>
+                <span class="value">August 2000</span>
+              </div>
+            </div>
+            <div class="info-card">
+              <div class="info-icon"><i class="fas fa-phone"></i></div>
+              <div>
+                <span class="label">Phone</span>
+                <span class="value">+20 1092898024</span>
+              </div>
+            </div>
+            <div class="info-card">
+              <div class="info-icon"><i class="fas fa-envelope"></i></div>
+              <div>
+                <span class="label">Email</span>
+                <span class="value">amirseelem1508@gmail.com</span>
+              </div>
+            </div>
+            <div class="info-card">
+              <div class="info-icon"><i class="fas fa-location-dot"></i></div>
+              <div>
+                <span class="label">Location</span>
+                <span class="value">Nasr City, Cairo, Egypt</span>
+              </div>
+            </div>
+            <div class="info-card">
+              <div class="info-icon"><i class="fas fa-graduation-cap"></i></div>
+              <div>
+                <span class="label">Degree</span>
+                <span class="value">B.Sc. in MIS</span>
+              </div>
+            </div>
+            <div class="info-card">
+              <div class="info-icon"><i class="fas fa-language"></i></div>
+              <div>
+                <span class="label">Languages</span>
+                <span class="value">Arabic (Native), English</span>
+              </div>
+            </div>
+            <div class="info-card">
+              <div class="info-icon"><i class="fas fa-briefcase"></i></div>
+              <div>
+                <span class="label">Status</span>
+                <span class="value">Available for Hire</span>
+              </div>
+            </div>
+            <div class="info-card">
+              <div class="info-icon"><i class="fas fa-shield"></i></div>
+              <div>
+                <span class="label">Military</span>
+                <span class="value">Completed March 2024</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="about-cta">
+            <a href="Amir-Ahmed-CV.pdf" download class="btn btn-gold">
+              <i class="fas fa-download"></i> Download CV
+            </a>
+            <a href="#contact" class="btn btn-ghost">
+              <i class="fas fa-paper-plane"></i> Contact Me
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============= SKILLS ============= -->
+  <section id="skills">
+    <div class="container">
+      <div class="section-head reveal">
+        <span class="section-tag">02 / Skills</span>
+        <h2 class="section-title">My <span class="emerald-text">Skills</span></h2>
+        <p class="section-subtitle">A blend of networking, development, and IT support expertise — verified by certifications and battle-tested in real-world roles.</p>
+      </div>
+
+      <div class="skills-grid">
+        <div class="skill-category glass reveal">
+          <div class="cat-head">
+            <div class="cat-icon"><i class="fas fa-network-wired"></i></div>
+            <div>
+              <div class="cat-title">Networking &amp; Infrastructure</div>
+              <div class="cat-sub">// routing · switching · security</div>
+            </div>
+          </div>
+          <div class="skill-row">
+            <div class="skill-meta"><span class="name">CCNA — Cisco Networking</span><span class="pct">90%</span></div>
+            <div class="skill-track"><div class="skill-fill" data-width="90"></div></div>
+          </div>
+          <div class="skill-row">
+            <div class="skill-meta"><span class="name">MCSA — Microsoft Server Admin</span><span class="pct">70%</span></div>
+            <div class="skill-track"><div class="skill-fill" data-width="70"></div></div>
+          </div>
+          <div class="skill-row">
+            <div class="skill-meta"><span class="name">Cisco Packet Tracer</span><span class="pct">80%</span></div>
+            <div class="skill-track"><div class="skill-fill" data-width="80"></div></div>
+          </div>
+          <div class="skill-row">
+            <div class="skill-meta"><span class="name">LAN / WAN / TCP/IP</span><span class="pct">75%</span></div>
+            <div class="skill-track"><div class="skill-fill" data-width="75"></div></div>
+          </div>
+        </div>
+
+        <div class="skill-category glass reveal reveal-delay-1">
+          <div class="cat-head">
+            <div class="cat-icon"><i class="fas fa-code"></i></div>
+            <div>
+              <div class="cat-title">Web Development</div>
+              <div class="cat-sub">// front-end · mobile · AI</div>
+            </div>
+          </div>
+          <div class="skill-row">
+            <div class="skill-meta"><span class="name">HTML5</span><span class="pct">98%</span></div>
+            <div class="skill-track"><div class="skill-fill" data-width="98"></div></div>
+          </div>
+          <div class="skill-row">
+            <div class="skill-meta"><span class="name">CSS3</span><span class="pct">85%</span></div>
+            <div class="skill-track"><div class="skill-fill" data-width="85"></div></div>
+          </div>
+          <div class="skill-row">
+            <div class="skill-meta"><span class="name">JavaScript</span><span class="pct">70%</span></div>
+            <div class="skill-track"><div class="skill-fill" data-width="70"></div></div>
+          </div>
+          <div class="skill-row">
+            <div class="skill-meta"><span class="name">Flutter &amp; Dart</span><span class="pct">60%</span></div>
+            <div class="skill-track"><div class="skill-fill" data-width="60"></div></div>
+          </div>
+        </div>
+
+        <div class="skill-category glass reveal reveal-delay-2">
+          <div class="cat-head">
+            <div class="cat-icon"><i class="fas fa-tools"></i></div>
+            <div>
+              <div class="cat-title">IT Support &amp; Tools</div>
+              <div class="cat-sub">// helpdesk · hardware · UX</div>
+            </div>
+          </div>
+          <div class="skill-row">
+            <div class="skill-meta"><span class="name">Hardware Diagnostics &amp; Troubleshooting</span><span class="pct">95%</span></div>
+            <div class="skill-track"><div class="skill-fill" data-width="95"></div></div>
+          </div>
+          <div class="skill-row">
+            <div class="skill-meta"><span class="name">Windows OS &amp; Microsoft Office</span><span class="pct">99%</span></div>
+            <div class="skill-track"><div class="skill-fill" data-width="99"></div></div>
+          </div>
+          <div class="skill-row">
+            <div class="skill-meta"><span class="name">Active Directory &amp; Cybersecurity</span><span class="pct">70%</span></div>
+            <div class="skill-track"><div class="skill-fill" data-width="70"></div></div>
+          </div>
+          <div class="skill-row">
+            <div class="skill-meta"><span class="name">Database Management</span><span class="pct">65%</span></div>
+            <div class="skill-track"><div class="skill-fill" data-width="65"></div></div>
+          </div>
+          <div class="skill-row">
+            <div class="skill-meta"><span class="name">UI/UX Design</span><span class="pct">90%</span></div>
+            <div class="skill-track"><div class="skill-fill" data-width="90"></div></div>
+          </div>
+          <div class="skill-row">
+            <div class="skill-meta"><span class="name">Communication &amp; User Support</span><span class="pct">92%</span></div>
+            <div class="skill-track"><div class="skill-fill" data-width="92"></div></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============= EXPERIENCE ============= -->
+  <section id="experience">
+    <div class="container">
+      <div class="section-head reveal">
+        <span class="section-tag">03 / Experience</span>
+        <h2 class="section-title">My <span class="gold-text">Journey</span></h2>
+        <p class="section-subtitle">From freelance web development to enterprise IT support — every role has sharpened a different facet of my craft.</p>
+      </div>
+
+      <div class="timeline">
+        <div class="tl-item reveal">
+          <span class="tl-dot"></span>
+          <div class="tl-card glass">
+            <span class="tl-date"><i class="fas fa-circle" style="font-size:.5rem"></i> Mar 2025 — Present</span>
+            <h3 class="tl-role">IT Helpdesk Specialist</h3>
+            <p class="tl-company">Everscope – BoldRoutes Group</p>
+            <ul class="tl-details">
+              <li>Maintain documentation and inventory of IT assets across the organization.</li>
+              <li>Install, configure, and maintain Windows-based systems and office applications.</li>
+              <li>Track IT asset inventory and ensure timely issue resolution for end users.</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="tl-item right reveal">
+          <span class="tl-dot"></span>
+          <div class="tl-card glass">
+            <span class="tl-date"><i class="fas fa-circle" style="font-size:.5rem"></i> Apr 2024 — Feb 2025</span>
+            <h3 class="tl-role">Real Estate Sales Executive</h3>
+            <p class="tl-company">Merak Real Estate</p>
+            <ul class="tl-details">
+              <li>Managed a portfolio of clients and offered tailored real estate solutions.</li>
+              <li>Maintained accurate records and consistent client communications.</li>
+              <li>Negotiated deals while maintaining professionalism and clarity.</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="tl-item reveal">
+          <span class="tl-dot"></span>
+          <div class="tl-card glass">
+            <span class="tl-date"><i class="fas fa-circle" style="font-size:.5rem"></i> 2020 — 2022</span>
+            <h3 class="tl-role">Web Developer &amp; AI Specialist</h3>
+            <p class="tl-company">Scale AI &amp; Freelancer</p>
+            <ul class="tl-details">
+              <li>Developed web pages and integrated AI-driven solutions for clients.</li>
+              <li>Optimized website performance using multiple programming languages.</li>
+              <li>Worked as a Prompt Engineer for Google Bard AI on remote employment sites.</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="tl-item right reveal">
+          <span class="tl-dot"></span>
+          <div class="tl-card glass">
+            <span class="tl-date"><i class="fas fa-circle" style="font-size:.5rem"></i> 2022 (2 months)</span>
+            <h3 class="tl-role">Customer Service &amp; Technical Support</h3>
+            <p class="tl-company">Telecom Egypt (WE)</p>
+            <ul class="tl-details">
+              <li>Reviewed and verified customer data for accuracy and consistency.</li>
+              <li>Managed and maintained databases, ensuring efficiency and integrity.</li>
+              <li>Provided analytical insights to enhance data management strategies.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============= CERTIFICATIONS ============= -->
+  <section id="certifications">
+    <div class="container">
+      <div class="section-head reveal">
+        <span class="section-tag">04 / Certificates</span>
+        <h2 class="section-title">My <span class="emerald-text">Certifications</span></h2>
+        <p class="section-subtitle">Industry-recognized credentials in networking, project management, AI, and web development.</p>
+      </div>
+
+      <div class="cert-grid">
+        <div class="cert-card glass reveal">
+          <div class="cert-top">
+            <div class="cert-icon"><i class="fas fa-network-wired"></i></div>
+            <span class="cert-badge">Cisco</span>
+          </div>
+          <h3 class="cert-title">CCNA</h3>
+          <p class="cert-desc">Cisco Certified Network Associate — fundamentals of networking, routing, switching, and basic network security.</p>
+        </div>
+
+        <div class="cert-card glass reveal reveal-delay-1">
+          <div class="cert-top">
+            <div class="cert-icon"><i class="fab fa-microsoft"></i></div>
+            <span class="cert-badge">Microsoft</span>
+          </div>
+          <h3 class="cert-title">MCSA</h3>
+          <p class="cert-desc">Microsoft Certified Solutions Associate — server administration, Active Directory, and Windows infrastructure management.</p>
+        </div>
+
+        <div class="cert-card glass reveal reveal-delay-2">
+          <div class="cert-top">
+            <div class="cert-icon"><i class="fas fa-diagram-project"></i></div>
+            <span class="cert-badge">Google</span>
+          </div>
+          <h3 class="cert-title">Google Project Management</h3>
+          <p class="cert-desc">Professional Certificate from Coursera — IT project management, task planning, risk management, and agile methodologies.</p>
+        </div>
+
+        <div class="cert-card glass reveal">
+          <div class="cert-top">
+            <div class="cert-icon"><i class="fas fa-robot"></i></div>
+            <span class="cert-badge">AI</span>
+          </div>
+          <h3 class="cert-title">Prompt Engineering for ChatGPT</h3>
+          <p class="cert-desc">Coursera Certificate — advanced AI prompting techniques and practical applications for large language models.</p>
+        </div>
+
+        <div class="cert-card glass reveal reveal-delay-1">
+          <div class="cert-top">
+            <div class="cert-icon"><i class="fas fa-cubes"></i></div>
+            <span class="cert-badge">Coursera</span>
+          </div>
+          <h3 class="cert-title">Foundations of Project Management</h3>
+          <p class="cert-desc">Project initiation, planning, execution, and agile management methodologies from Google via Coursera.</p>
+        </div>
+
+        <div class="cert-card glass reveal reveal-delay-2">
+          <div class="cert-top">
+            <div class="cert-icon"><i class="fab fa-html5"></i></div>
+            <span class="cert-badge">SoloLearn</span>
+          </div>
+          <h3 class="cert-title">HTML Certificate</h3>
+          <p class="cert-desc">SoloLearn — web markup language proficiency, semantic structure, and front-end development foundations.</p>
+        </div>
+
+        <div class="cert-card glass reveal">
+          <div class="cert-top">
+            <div class="cert-icon"><i class="fab fa-css3-alt"></i></div>
+            <span class="cert-badge">SoloLearn</span>
+          </div>
+          <h3 class="cert-title">CSS Certificate</h3>
+          <p class="cert-desc">SoloLearn — styling, responsive layouts, modern CSS features, and CSS animations for production websites.</p>
+        </div>
+
+        <div class="cert-card glass reveal reveal-delay-1">
+          <div class="cert-top">
+            <div class="cert-icon"><i class="fas fa-arrows-spin"></i></div>
+            <span class="cert-badge">Coursera</span>
+          </div>
+          <h3 class="cert-title">Agile Project Management</h3>
+          <p class="cert-desc">Agile methodologies, sprint planning, iterative development, and Scrum framework from Google via Coursera.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============= EDUCATION ============= -->
+  <section id="education">
+    <div class="container">
+      <div class="section-head reveal">
+        <span class="section-tag">05 / Education</span>
+        <h2 class="section-title">My <span class="gold-text">Education</span></h2>
+        <p class="section-subtitle">Academic foundation in Management Information Systems — bridging business strategy and IT execution.</p>
+      </div>
+
+      <div class="edu-grid">
+        <div class="edu-card glass reveal">
+          <div class="edu-icon"><i class="fas fa-university"></i></div>
+          <div>
+            <div class="edu-year">2019 — 2022</div>
+            <h3 class="edu-degree">Bachelor's Degree in MIS</h3>
+            <p class="edu-school">El Shorouk Academy</p>
+            <p class="edu-text">Management Information Systems — comprehensive study of IT infrastructure, system analysis, database management, and business process optimization. Graduation project in Flutter earned an A grade.</p>
+          </div>
+        </div>
+
+        <div class="edu-card glass reveal reveal-delay-1">
+          <div class="edu-icon"><i class="fas fa-school"></i></div>
+          <div>
+            <div class="edu-year">2018 — 2019</div>
+            <h3 class="edu-degree">General Secondary Education</h3>
+            <p class="edu-school">High School Certificate</p>
+            <p class="edu-text">Completed general secondary education with a focus on scientific studies and mathematics — built the analytical foundation for a technology career.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============= CONTACT ============= -->
+  <section id="contact">
+    <div class="container">
+      <div class="section-head reveal">
+        <span class="section-tag">06 / Contact</span>
+        <h2 class="section-title">Get In <span class="emerald-text">Touch</span></h2>
+        <p class="section-subtitle">Have a project, opportunity, or just want to say hello? I'm always open to discussing new challenges.</p>
+      </div>
+
+      <div class="contact-grid">
+        <div class="contact-info reveal">
+          <a href="mailto:amirseelem1508@gmail.com" class="contact-card glass">
+            <div class="contact-card-icon"><i class="fas fa-envelope"></i></div>
+            <div class="contact-card-data">
+              <span class="label">Email Me</span>
+              <span class="value">amirseelem1508@gmail.com</span>
+            </div>
+          </a>
+          <a href="tel:+201092898024" class="contact-card glass">
+            <div class="contact-card-icon"><i class="fas fa-phone"></i></div>
+            <div class="contact-card-data">
+              <span class="label">Call Me</span>
+              <span class="value">+20 1092898024</span>
+            </div>
+          </a>
+          <a href="https://wa.me/01092898024" target="_blank" class="contact-card glass">
+            <div class="contact-card-icon"><i class="fab fa-whatsapp"></i></div>
+            <div class="contact-card-data">
+              <span class="label">WhatsApp</span>
+              <span class="value">+20 1092898024</span>
+            </div>
+          </a>
+          <div class="contact-card glass">
+            <div class="contact-card-icon"><i class="fas fa-location-dot"></i></div>
+            <div class="contact-card-data">
+              <span class="label">Location</span>
+              <span class="value">Nasr City, Cairo, Egypt</span>
+            </div>
+          </div>
+
+          <div class="contact-socials-row">
+            <a href="https://www.facebook.com/profile.php?id=100014535060032" target="_blank" class="social-icon"><i class="fab fa-facebook-f"></i></a>
+            <a href="https://wa.me/01092898024" target="_blank" class="social-icon"><i class="fab fa-whatsapp"></i></a>
+            <a href="https://www.instagram.com/amir._.ahmed_/" target="_blank" class="social-icon"><i class="fab fa-instagram"></i></a>
+            <a href="https://twitter.com/amahmed1508" target="_blank" class="social-icon"><i class="fab fa-twitter"></i></a>
+            <a href="https://www.linkedin.com/in/amir-ahmed-ba3220278/" target="_blank" class="social-icon"><i class="fab fa-linkedin-in"></i></a>
+            <a href="https://github.com/Mr-Amir-Ahmed" target="_blank" class="social-icon"><i class="fab fa-github"></i></a>
+            <a href="https://www.behance.net/amirahmed56" target="_blank" class="social-icon"><i class="fab fa-behance"></i></a>
+          </div>
+        </div>
+
+        <form class="contact-form glass reveal reveal-delay-1" id="contactForm">
+          <div class="form-group">
+            <label>Your Name</label>
+            <input type="text" class="form-input" placeholder="John Doe" required>
+          </div>
+          <div class="form-group">
+            <label>Your Email</label>
+            <input type="email" class="form-input" placeholder="john@example.com" required>
+          </div>
+          <div class="form-group">
+            <label>Subject</label>
+            <input type="text" class="form-input" placeholder="Project inquiry" required>
+          </div>
+          <div class="form-group">
+            <label>Message</label>
+            <textarea class="form-textarea" placeholder="Tell me about your project..." required></textarea>
+          </div>
+          <button type="submit" class="btn btn-gold" style="width:100%;justify-content:center">
+            <i class="fas fa-paper-plane"></i> Send Message
+          </button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============= FOOTER ============= -->
+  <footer>
+    <div class="container">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <a href="#home" class="nav-logo">
+            <span class="bracket">&lt;</span>
+            <span class="name">Amir</span>
+            <span class="bracket">/&gt;</span>
+          </a>
+          <p>IT Helpdesk Specialist, Network Administrator, and Web Developer based in Cairo, Egypt. Always learning, always building, always ready for the next challenge.</p>
+        </div>
+        <div class="footer-col">
+          <h4>Navigate</h4>
+          <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#experience">Experience</a></li>
+            <li><a href="#certifications">Certificates</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Connect</h4>
+          <ul>
+            <li><a href="https://www.linkedin.com/in/amir-ahmed-ba3220278/" target="_blank">LinkedIn</a></li>
+            <li><a href="https://github.com/Mr-Amir-Ahmed" target="_blank">GitHub</a></li>
+            <li><a href="https://www.behance.net/amirahmed56" target="_blank">Behance</a></li>
+            <li><a href="https://www.facebook.com/profile.php?id=100014535060032" target="_blank">Facebook</a></li>
+            <li><a href="https://wa.me/01092898024" target="_blank">WhatsApp</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; <span id="year"></span> Amir Ahmed Abd El Hakem Seleem. All rights reserved.</p>
+        <p class="made">Built with <span class="heart">◆</span> using Three.js + Glassmorphism</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ============= TOAST (form feedback) ============= -->
+  <div class="toast" id="toast">
+    <i class="fas fa-check-circle"></i>
+    <span id="toastMsg">Message sent successfully!</span>
+  </div>
+
+  <!-- ============= EXTERNAL LIBRARIES ============= -->
+  <!-- Three.js — 3D WebGL engine -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+  <!-- Typed.js — typewriter effect -->
+  <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+
+  <!-- ============= PROJECT SCRIPTS (load order matters) ============= -->
+  <!-- 1) Three.js 3D background scene -->
+  <script src="js/three-scene.js"></script>
+  <!-- 2) Typed.js role rotator config -->
+  <script src="js/typed-config.js"></script>
+  <!-- 3) Core UI interactions (nav, menu, scroll, tilt, form) -->
+  <script src="js/main.js"></script>
+
+</body>
+</html>
